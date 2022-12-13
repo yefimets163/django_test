@@ -1,5 +1,4 @@
 from multiprocessing import Process
-import datetime
 
 result = 0
 
@@ -12,7 +11,6 @@ def countTicket (start, end):
     print(f' from {start} to {end}: {count}')
 
 if __name__ == '__main__':
-    timeStart = datetime.datetime.now()
 
     p1 = Process(target = countTicket, args = [0, 250000])
     p2 = Process(target = countTicket, args = [250000, 500000])
